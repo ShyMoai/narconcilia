@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="pageTitle">
+        <h1>Calculator</h1>
+    </div>
+    <br>
+    <div id="navigateButtons">
+        <button class="selectPage" onclick="window.location='./index.html'">
+            <p>Home</p>
+        </button>
+        <button class="selectPage" onclick="window.location='./news.html'">
+            <p>News</p>
+        </button>
+                <button class="selectPage" onclick="window.location='./archives.html'">
+            <p>Archives</p>
+        </button>
+        </button>
+        <button class="selectPage" onclick="window.location='./calculator.html'">
+            <p>Calculator</p>
+        </button>
+    </div>
+    <h2>Rat Time Calculator</h2>
+    <br><br><br>
+    <h4>Enter your rat time here :</h4>
+    <form>
+        <input type="number" id="years" name="years" min="0" step="1">
+        <label for="years">Years   </label>
+        <input type="number" id="months" name="months" min="0" step="1">
+        <label for="months">Months   </label>
+        <input type="number" id="weeks" name="weeks" min="0" step="1">
+        <label for="weeks">Weeks   </label>
+        <input type="number" id="days" name="days" min="0" step="1">
+        <label for="days">Days   </label>
+        <input type="number" id="hours" name="hours" min="0" step="1">
+        <label for="hours">Hours   </label>
+        <input type="number" id="minutes" name="minutes" min="0" step="1">
+        <label for="minutes">Minutes   </label>
+        <input type="number" id="seconds" name="seconds" min="0" step="1">
+        <label for="seconds">Seconds   </label>
+    </form>
+    <button onclick="update()">Calculate</button><br><br><br>
+    <h3>Results</h3><br>
+    <h4 id="secondsAmount">You have spent 0 seconds watching the rats which is also :</h4>
+    <p id="minutesAmount">0% of a minute</p>
+    <p id="hoursAmount">0% of an hour</p>
+    <p id="daysAmount">0% of a day</p>
+    <p id="weeksAmount">0% of a week</p>
+    <p id="monthsAmount">0% of a month</p>
+    <p id="yearsAmount">0% of a year</p>
+    <p id="livesAmount">0% of a human life</p>
+    <p id="milleniumsAmount">0% of a millenium</p>
+    <p id="flipsAmount">0% of a magnetic pole flip</p>
+    <p id="galaxiesAmount">0% of a galactic year</p>
+    <p id="universesAmount">0% of the age of the universe</p>
+    <p>0% of the waiting time for GTA VI</p>
+</body>
+<style>
+    #pageTitle {
+        left: 0%;
+        top: 0%;
+        width: 100%;
+        background-color: gray;
+    }
+    .sevencollums {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    input {
+        width: 50px;
+    }
+</style>
+<script src="calculator.js"></script>
+</html>

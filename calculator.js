@@ -90,7 +90,7 @@ function update() {
                 document.getElementById("milleniumsAmount").innerHTML = round(time_milleniums * 1000000000, 6) + " billionths of a millenium"
         }
         if (time_flips >= 1) {
-                document.getElementById("flipsAmount").innerHTML = round(time_filps, 2) + " magnetic pole flip"
+                document.getElementById("flipsAmount").innerHTML = round(time_flips, 2) + " magnetic pole flip"
         } else if (time_flips >= 0.0001) {
                 document.getElementById("flipsAmount").innerHTML = round(time_flips * 100, 3) + "% of a magnetic pole flip"
         } else if (time_flips >= 0.000001) {
@@ -151,4 +151,5 @@ function convert() {
 }
 function round(Number, Number2) {
         return Math.round(Number * Math.pow(10, Number2)) / Math.pow(10, Number2)
+
 }

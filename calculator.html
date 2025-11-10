@@ -26,7 +26,8 @@
         </button>
     </div>
     <h2>Rat Time Calculator</h2>
-    <br><br><br>
+    <button onclick="toggleAutomaticIncrease()">Toggle Automatic Increase</button>
+    <br><br>
     <h4>Enter your rat time here :</h4>
     <form>
         <input type="number" id="years" name="years" min="0" step="1">
@@ -61,7 +62,11 @@
     <p>0% of the waiting time for GTA VI</p>
     <br>
     <p>Your current class in the discord is <b id="class-dc">Nothing</b></p>
-    <p>Your current class in the extended system is <b id="class-ex"></b>Not implemented</p>
+    <p>You are ≈<b id="percent-dc">0</b>% of the way to the next discord class </p>
+    <div class="threecollums"><div><p id="current-dc">Nothing</p></div><div><progress max="1" value="0" class="progress-next-class" id="progress-dc"></progress></div><div><p id="next-dc">New Spinning Rat</p></div></div><br>
+    <p>Your current class in the extended system is <b id="class-ex">Nothing</b></p>
+    <p>You are ≈<b id="percent-ex">0</b>% of the way to the next extended class </p>
+    <div class="threecollums"><div><p id="current-ex">Nothing</p></div><div><progress max="1" value="0" class="progress-next-class" id="progress-ex"></progress></div><div><p id="next-ex">Non-Spinning Rat</p></div></div><br>
 </body>
 <style>
     #pageTitle {
@@ -70,11 +75,22 @@
         width: 100%;
         background-color: gray;
     }
-    .sevencollums {
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    .progress-next-class {
+        width: 90%;
+        height: 50px;
+        margin: 0;
+    }
+    .threecollums {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        width: 50%;
+        text-align: center;
     }
     input {
         width: 50px;
+    }
+    div {
+        margin: 0;
     }
 </style>
 <script src="./calculator.js"></script>
